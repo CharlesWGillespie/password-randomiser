@@ -14,9 +14,8 @@ for practice and learning: https://www.freecodecamp.org/learn/javascript-algorit
 
 ##Preview Screenshots
 
-https://charleswgillespie.github.io/password-randomiser/
 ![img-password-randomiser](https://github.com/CharlesWGillespie/password-randomiser/assets/143773137/d9a2fdca-2b7f-474c-9c96-9ec3b00d92f4)
-
+https://charleswgillespie.github.io/password-randomiser
 
 ## Features
 
