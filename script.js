@@ -1,5 +1,4 @@
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
 //TODO: WHEN I click the button to generate a password Write password to the #password input
 //TODO:WHEN prompted for password criteria
 // THEN I select which criteria to include in the password
@@ -75,4 +74,9 @@ document.getElementById("generate").addEventListener("click", function () {
   }
 // this is the output of the entire function and will spit out the password.
   document.getElementById("password").value = password;
+});
+
+// this clears the password that was generated.
+document.getElementById("clear").addEventListener("click", function () {
+  document.getElementById("password").value = "";
 });
