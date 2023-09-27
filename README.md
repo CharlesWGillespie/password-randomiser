@@ -12,7 +12,7 @@ To use this website the user needs to specify what they want the password length
 for referencing: https://www.w3schools.com/js/js_functions.asp
 for practice and learning: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/
 
-##Preview Screenshots
+## Preview Screenshots
 
 ![img-password-randomiser](https://github.com/CharlesWGillespie/password-randomiser/assets/143773137/d9a2fdca-2b7f-474c-9c96-9ec3b00d92f4)
 https://charleswgillespie.github.io/password-randomiser
