@@ -25,10 +25,54 @@ var generateBtn = document.querySelector("#generate");
 
 //when the button is clicked this will make the code run
 document.getElementById("generate").addEventListener("click", function () {
+  
+  //this checks whether or not the boxes were checked (checked=TRUE, unchecked=FALSE)
   const length = parseInt(document.getElementById("passwordLength").value);
   const includeUppercase = document.getElementById("includeUppercase").checked;
   const includeLowercase = document.getElementById("includeLowercase").checked;
   const includeNumbers = document.getElementById("includeNumbers").checked;
   const includeSpecialChars = document.getElementById("includeSpecialChars").checked;
 
-  
+  //this will send the user an alert message if they do not have any checkbox selected.
+  if (!includeUppercase && !includeLowercase && !includeNumbers && !includeSpecialChars) {
+        alert("Please select at least one character type.");
+      return;
+  }
+
+  //this will send the user an alert if they do not have any character length selected 
+  if (length < 8 || length > 128) {
+      alert("Password length must be between 8 and 128 characters.");
+      return;
+  }
+
+  //this defines the four types of character sets to choose from
+  const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  const numberChars = "0123456789";
+  const specialChars = "!@#$%^&*-_?";
+
+  //this is the new variable defined to combined different charcters the user has seleted.
+  let comboChars = "";
+
+  if (includeUppercase) {
+      comboChars += uppercaseChars;
+  }
+  if (includeLowercase) {
+      comboChars += lowercaseChars;
+  }
+  if (includeNumbers) {
+      comboChars += numberChars;
+  }
+  if (includeSpecialChars) {
+      comboChars += specialChars;
+  }
+
+  //this creates an empty string called password and runs a loop howver long the length is, and generates a random index in the comboChars variable
+  let password = "";
+  for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * comboChars.length);
+      password += comboChars.charAt(randomIndex);
+  }
+// this is the output of the entire function and will spit out the password.
+  document.getElementById("password").value = password;
+});
