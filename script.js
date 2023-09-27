@@ -13,12 +13,22 @@ var generateBtn = document.querySelector("#generate");
 // THEN a password is generated that matches the selected criteria
 // TODO:WHEN the password is generated
 // THEN the password is either displayed in an alert or written to the page
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+// function writePassword() {
+//   var password = generatePassword();
+//   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+//   passwordText.value = password;
 
-}
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// }
+// // Add event listener to generate button
+// generateBtn.addEventListener("click", writePassword);
+
+//when the button is clicked this will make the code run
+document.getElementById("generate").addEventListener("click", function () {
+  const length = parseInt(document.getElementById("passwordLength").value);
+  const includeUppercase = document.getElementById("includeUppercase").checked;
+  const includeLowercase = document.getElementById("includeLowercase").checked;
+  const includeNumbers = document.getElementById("includeNumbers").checked;
+  const includeSpecialChars = document.getElementById("includeSpecialChars").checked;
+
+  

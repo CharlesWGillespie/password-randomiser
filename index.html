@@ -9,7 +9,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1>Password Generator</h1>
+        <h1>Random Password Generator</h1>
       </header>
       <div class="card">
         <div class="card-header">
@@ -27,13 +27,14 @@
           <label for ="passwordLength">Password Length(8-128 characters):</label>
           <input type="number" id="passwordLength" min="8" max="128">
           <br>
-          <input type="checkbox" id="addUppercase"> Uppercase 
+          <input type="checkbox" id="includeUppercase"> Uppercase 
           <br>
-          <input type="checkbox" id="addLowercase"> Lowercase
+          <input type="checkbox" id="includeLowercase"> Lowercase
           <br>
-          <input type="checkbox" id="addNumbers"> Numbers
+          <input type="checkbox" id="includeNumbers"> Numbers
           <br>
-          <input type="checkbox" id="addSpecial"> Special Characters
+          <input type="checkbox" id="includeSpecialChars"> Special Characters
+          <script src="script.js"></script>
         <div class="card-footer">
           <button id="generate" class="btn">Generate Password</button>
         </div>
